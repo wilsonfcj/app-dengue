@@ -1,0 +1,9 @@
+<resources>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="size_logo_login">110dp</dimen>
+    <dimen name="margin_top_logo_login">50dp</dimen>
+    <dimen name="margin_register_form">32dp</dimen>
+    <dimen name="img_perfil_normal">68dp</dimen>
+    <dimen name="img_perfil_register">76dp</dimen>
+    <dimen name="size_text_name_my_profile">16sp</dimen>
+</resources>

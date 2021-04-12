@@ -1,0 +1,137 @@
+<resources>
+    <string name="app_name">Focos de Dengue</string>
+    <string name="action_settings">Settings</string>
+    <string name="action_exit">Exit</string>
+    <string name="prompt_logar_com_leitor">Logar com leitor</string>
+    <string name="prompt_guardar_meu_cpf">Guardar meu CPF</string>
+    <string name="prompt_ok">Ok</string>
+    <string name="prompt_acessar">Acessar</string>
+    <string name="prompt_cpf">CPF</string>
+    <string name="prompt_description">Descrição</string>
+    <string name="prompt_name">Nome</string>
+    <string name="prompt_cell_fone">Telefone</string>
+    <string name="prompt_email">E-mail</string>
+    <string name="prompt_password">Senha</string>
+    <string name="prompt_old_password">Senha Antiga</string>
+    <string name="prompt_new_password">Nova Senha</string>
+    <string name="prompt_confirm_password">Confirmar Senha</string>
+    <string name="prompt_birthday">Data de nascimento</string>
+    <string name="prompt_qtd">Número participantes</string>
+    <string name="prompt_type_simulated">Tipo Simulado</string>
+    <string name="prompt_education_institution">Instituição</string>
+    <string name="prompt_user_type">Tipo Usuário</string>
+    <string name="prompt_registration">Matricula</string>
+    <string name="prompt_yers_join">Ano Ingresso</string>
+    <string name="prompt_next">Próximo</string>
+    <string name="prompt_register_simulated">Cadastrar Agora</string>
+    <string name="prompt_send_sugestion">Enivar Sugestão</string>
+    <string name="prompt_matters">Disciplinas</string>
+    <string name="prompt_plus">Mais informações</string>
+    <string name="prompt_result_matters">Desempenho disciplinas</string>
+
+    <string name="label_location">Localização</string>
+    <string name="msm_location">É necessário habilitar a permissçao de localização para continuar, habilitar agora?</string>
+
+    <string name="prompt_register">Cadastre-se agora</string>
+    <string name="prompt_update">Alterar agora</string>
+    <string name="prompt_loading_register">Registrando usuário</string>
+    <string name="prompt_loading_update">Alterando usuário</string>
+
+    <string name="prompt_teacher">Professor</string>
+    <string name="prompt_student">Aluno</string>
+
+    <string name="error_login_invalido">CPF Inválido</string>
+    <string name="error_invalid_cpf">Informe um CPF válido</string>
+    <string name="error_conection">Sem conexão com a internet, verifique sua conexão para continuar!</string>
+    <string name="error_invalid_name">Insira o nome completo</string>
+    <string name="error_invalid_phone">Insira um telefone válido</string>
+    <string name="error_invalid_email">E-mail inválido</string>
+    <string name="error_invalid_birthday">Informe a data de nascimento</string>
+    <string name="error_invalid_education">Informe a instituição</string>
+    <string name="error_invalid_user_type">Informe o tipo de usuário</string>
+    <string name="error_invalid_simulated_type">Informe o tipo do simulado</string>
+    <string name="error_invalid_name_simulated">Insira um nome</string>
+    <string name="error_invalid_name_description">Insira uma descrição</string>
+    <string name="error_invalid_qtd_students_empty">Informe a quantidade de alunos</string>
+    <string name="error_invalid_qtd_students">A quantidade de alunos deve ser maior que 2</string>
+
+    <string name="error_invalid_register_numer">Informe sua matrícula</string>
+
+    <string name="error_invalid_min_data">Ano deve ser maior que 2000</string>
+    <string name="error_invalid_max_data">Ano deve ser menor ou igual o ano atual</string>
+    <string name="error_invalid_join_yers">Informe o ano de ingresso</string>
+
+    <string name="error_invalid_old_password">Senha inválida</string>
+
+    <string name="error_invalid_topic">Selecione o assunto</string>
+    <string name="error_empty_topic">Informe o assunto</string>
+    <string name="error_msm_empty">Informe a mensagem</string>
+    <string name="error_msm_legth">A mensagem deve conter mais de 5 carateres</string>
+
+    <string name="error_invalid_password">Senha deve conter no mínimo 6 caracteres</string>
+    <string name="error_invalid_confirm_password">Senhas não correspondem</string>
+    <string name="prompt_send_image">Compartilhar imagem</string>
+
+    <string name="transition_avatar" translatable="false">transition_avatar</string>
+    <string name="bem_vindo" translatable="false">Bem vindo(a),</string>
+
+    <string name="title_simuladed_available">SIMULADOS DISPONÍVEIS</string>
+    <string name="title_simuladed">SIMULADOS</string>
+    <string name="title_new_simulated">NOVO SIMULADO</string>
+    <string name="title_my_focos">MEUS FOCOS</string>
+    <string name="title_feedback">GABARITO SIMULADO</string>
+    <string name="title_response_simulated">SIMULADO</string>
+    <string name="title_my_classroom">SALAS DE SIMULADOS</string>
+    <string name="title_my_classroom_">MINHAS SALAS</string>
+    <string name="title_toolbar_dashboard">HOME</string>
+    <string name="title_specific_performance">DESEMPENHO ESPECÍFICO</string>
+    <string name="title_performance_simulado">DESEMPENHO SIMULADO</string>
+    <string name="title_performance_simulado_geral">DESEMPENHO ALUNOS</string>
+    <string name="title_toolbar_my_profile">MEU PERFIL</string>
+    <string name="title_toolbar_my_location">LOCALIZAÇÃO</string>
+    <string name="title_toolbar_register">CADASTRO</string>
+    <string name="title_toolbar_support">SUPORTE</string>
+    <string name="title_toolbar_update">ALTERAR PERFIL</string>
+    <string name="title_toolbar_register_foco">REGISTRAR FOCO</string>
+    <string name="title_toolbar_response_students">RESPOSTA ALUNOS</string>
+
+    <string name="prompt_version">Versão aplicativo</string>
+    <string name="prompt_lagind_generic">Buscando informações</string>
+
+    <string name="prompt_dashboard">Home</string>
+    <string name="prompt_simulados">Focos Cadastrados</string>
+    <string name="prompt_salas">Salas de Simulados</string>
+    <string name="prompt_suporte">Suporte</string>
+    <string name="prompt_sair">Sair</string>
+
+    <string name="prompt_alunos">Alunos</string>
+    <string name="prompt_meus_simulados">Meus Simulados</string>
+    <string name="prompt_minhas_salas">Minhas salas</string>
+    <string name="prompt_questoes">Questões</string>
+    <string name="prompt_config">Configurações</string>
+
+    <string name="prompt_waint">Em breve a funcionalidade estará disponível</string>
+    <string name="prompt_search">Buscando informações...</string>
+
+    <string name="prompt_not_simulated_classrorom">Nenhum simulado cadastrado para essa sala</string>
+    <string name="prompt_not_result">Nenhuma resultado encontrada</string>
+    <string name="prompt_not_result_simulated">Nenhuma simulado respondido</string>
+    <string name="prompt_not_result_matters">Nenhuma resultado de disciplina encontrado</string>
+    <string name="prompt_not_focos">Nenhum foco de dengue cadastrado</string>
+    <string name="prompt_not_classroom">Nenhum sala de simulado disponível</string>
+    <string name="prompt_response_students">Nenhuma resposta encontrada</string>
+    <string name="prompt_not_feed_back">Gabarito não encontrado para este simulado</string>
+    <string name="prompt_not_question">Nenhuma questão encontrada para este simulado</string>
+    <string name="timer">00:00:00</string>
+
+    <string name="Ok">OK</string>
+    <string name="yes">Sim</string>
+    <string name="no">Não</string>
+    <string name="delete">Apagar</string>
+    <string name="send">Enviar</string>
+    <string name="title_activity_maps">Map</string>
+
+    <string name="toast_gps_nao_ativado">GPS não está ativado, favor verificar.</string>
+    <string name="sem_conexão_sem_endereco" translatable="false">Não é possivel  consultar o endereço sem uma conexão com a internet.</string>
+    <string name="endereco_desconhecido" translatable="false">Endereço desconhecido</string>
+</resources>

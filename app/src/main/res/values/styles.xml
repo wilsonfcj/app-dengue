@@ -1,0 +1,89 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:buttonStyle">@style/buttonStyle.App</item>
+        <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <style name="buttonStyle.App" parent="android:Widget.Material.Button" tools:ignore="NewApi">
+        <item name="android:background">@drawable/ripple_effect</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="buttonStyle.AppTransparent" parent="android:Widget.Material.Button" tools:ignore="NewApi">
+        <item name="android:background">@drawable/ripple_effect_transparent</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="LoginActivityStyle" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="colorControlNormal">@color/colorPrimary</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/colorAccent</item>
+    </style>
+
+
+    <style name="TextHelperlAppearance.Login" parent="TextAppearance.Design.HelperText">
+        <!-- Floating label appearance here -->
+        <item name="android:textStyle">italic</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="ToolbarStyle"  parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:color">@color/colorToolbar</item>
+        <item name="toolbarNavigationButtonStyle">@style/Toolbar.Button.Navigation.Tinted</item>
+        <item name="android:fontFamily">sans-serif-thin</item>
+    </style>
+
+    <style name="ToolbarStyleTransparent"  parent="Theme.AppCompat.DayNight.NoActionBar">
+        <item name="android:textColorSecondary">@android:color/white</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColor">@android:color/white</item>
+        <item name="android:color">@android:color/transparent</item>
+        <item name="toolbarNavigationButtonStyle">@style/Toolbar.Button.Navigation.Tinted</item>
+        <item name="android:fontFamily">sans-serif-thin</item>
+    </style>
+
+    <style name="Toolbar.Button.Navigation.Tinted" parent="Widget.AppCompat.Toolbar.Button.Navigation">
+        <item name="android:tint">@android:color/white</item>
+    </style>
+
+    <style name="DatePickerSpinner">
+        <item name="android:textSize">22dp</item>
+        <item name="android:textColorPrimary">@color/colorPrimaryDark</item>
+        <item name="android:colorControlNormal" tools:targetApi="lollipop">@color/colorAccent</item>
+    </style>
+
+    <style name="DialogAnimationUpDown">
+        <item name="android:windowEnterAnimation">@anim/slide_up</item>
+        <item name="android:windowExitAnimation">@anim/slide_down</item>
+        <item name="android:backgroundDimEnabled">false</item>
+    </style>
+
+    <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
+        <item name="spinBars">false</item>
+        <item name="color">@color/white</item>
+    </style>
+
+    <style name="StyledDialogs_DialogAnimationNormal">
+        <item name="android:background">@drawable/bg_dialog</item>
+        <item name="android:windowEnterAnimation">@anim/dialog_styled_slide_up_normal</item>
+        <item name="android:windowExitAnimation">@anim/dialog_styled_slide_down_normal</item>
+    </style>
+</resources>

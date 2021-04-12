@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:padding="20dp">
+
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aviso"
+        tools:text="Aviso"
+        android:autoLink="web"
+        android:gravity="center"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        />
+
+    <ImageView
+        android:id="@+id/img"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:src="@drawable/ic_place"
+        app:tint="@color/icons"
+        android:layout_marginTop="10dp" />
+
+
+    <TextView android:id="@+id/text_msm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:autoLink="web"
+        tools:text="Sem conexão com a internet, tente novamente mais tarde!"
+        android:layout_marginTop="10dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <Button
+            android:id="@+id/button_yes"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:enabled="true"
+            android:text="Ok"
+            android:textAppearance="@style/TextAppearance.AppCompat.Inverse"
+            android:padding="8dp"
+            android:gravity="center"
+            app:backgroundTint="@color/colorPrimary"
+            android:layout_marginTop="20dp" />
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

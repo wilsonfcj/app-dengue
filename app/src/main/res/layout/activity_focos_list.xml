@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+<!--        <include android:id="@+id/container_toolbar" layout="@layout/layout_imagem_header"/>-->
+
+        <include android:id="@+id/container_toolbar" layout="@layout/widget_logo_toolbar"/>
+
+        <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+            android:id="@+id/swipe_refresh_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/container_toolbar">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="10dp"
+                android:layout_below="@+id/container_toolbar"
+                tools:listitem="@layout/list_item_foco"/>
+
+        </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        <aluno.ifsc.app.focos.dengue.resources.utilidades.components.CustomLayoutMsm
+            android:id="@+id/layout_error"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:title="@string/prompt_not_focos"
+            app:iconSrc="@drawable/ic_descritption"
+            android:layout_centerInParent="true"
+            android:visibility="invisible"
+            tools:visibility="visible"/>
+
+
+    </RelativeLayout>
+
+</RelativeLayout>

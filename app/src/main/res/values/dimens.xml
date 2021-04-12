@@ -1,0 +1,23 @@
+<resources>
+    <dimen name="size_eight">8dp</dimen>
+    <dimen name="size_image_dashboard">75dp</dimen>
+    <dimen name="pager_dot_size">8dp</dimen>
+
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="size_logo_login">50dp</dimen>
+    <dimen name="margin_top_logo_login">20</dimen>
+    <dimen name="margin_register_form">16dp</dimen>
+
+    <dimen name="margin_left_item_my_user">20dp</dimen>
+    <dimen name="margin_right_item_my_user">10dp</dimen>
+    <dimen name="margin_top_item_my_user">20dp</dimen>
+    <dimen name="img_perfil_normal">48dp</dimen>
+    <dimen name="img_perfil_register">56dp</dimen>
+    <dimen name="img_perfil_final">32dp</dimen>
+
+    <dimen name="list_item_spacing">16dp</dimen>
+    <dimen name="list_item_spacing_half">8dp</dimen>
+
+    <dimen name="pager_height">16dp</dimen>
+    <dimen name="txt_title_toolbar">18dp</dimen>
+</resources>

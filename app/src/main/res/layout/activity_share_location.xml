@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/layout_toolbar"
+            layout="@layout/widget_logo_toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/layout_mapa"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/set_background_transparent"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/rl_maps"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_above="@+id/ll_options"
+                android:layout_alignParentTop="true"
+                app:layout_constraintBottom_toTopOf="@+id/ll_options"
+                app:layout_constraintTop_toTopOf="parent">
+
+                <fragment
+                    android:id="@+id/ll_map"
+                    android:name="com.google.android.gms.maps.MapFragment"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent" />
+
+
+                <androidx.cardview.widget.CardView
+                    android:id="@+id/cardView_marker"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_above="@+id/ll_marker"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginBottom="4dp"
+                    app:cardCornerRadius="4dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="8dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Selecione esta localização"
+                            android:textColor="@color/colorPrimary"
+                            android:textSize="12sp"
+                            android:layout_marginBottom="8dp"
+                            android:textStyle="bold" />
+
+                        <ProgressBar
+                            android:id="@+id/progress_bar_marker"
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:layout_gravity="center"
+                            android:indeterminate="true" />
+
+                        <TextView
+                            android:id="@+id/textView_endereco_marker"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textSize="12sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_centerHorizontal="true"
+                    android:id="@+id/ll_marker"
+                    android:layout_above="@id/imageView_marker2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <ImageView
+                        android:id="@+id/imageView_marker"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/ic_baseline_add_location"
+                        app:tint="@color/accent" />
+
+                    <net.cachapa.expandablelayout.ExpandableLayout
+                        android:id="@+id/view_move_marker"
+                        android:layout_width="match_parent"
+                        android:layout_height="15dp" />
+
+                </LinearLayout>
+
+                <ImageView
+                    android:id="@+id/imageView_marker2"
+                    android:layout_width="14dp"
+                    android:layout_marginTop="-6dp"
+                    android:layout_height="8dp"
+                    android:layout_gravity="center"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/ic_shadow" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/ll_options"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+
+                <TextView
+                    android:id="@+id/textView_title_end"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="sans-serif-smallcaps"
+                    android:paddingBottom="4dp"
+                    android:layout_marginLeft="10dp"
+                    android:paddingTop="4dp"
+                    android:text="Compartilhar esta localização"
+                    android:textSize="16sp" />
+
+                <LinearLayout
+                    android:id="@+id/ll_location_selected"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/textView_title_end"
+                    android:gravity="start"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginRight="10dp"
+                    android:orientation="horizontal">
+
+                    <RelativeLayout
+                        android:layout_width="32dp"
+                        android:layout_height="32dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="8dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center"
+                            android:background="@drawable/bg_circle">
+
+                            <ImageView
+                                android:id="@+id/imageView_tipo_select"
+                                android:layout_width="24dp"
+                                android:layout_height="24dp"
+                                android:layout_centerInParent="true"
+                                android:src="@drawable/ic_baseline_add_location"
+                                app:tint="@color/white" />
+
+
+                        </RelativeLayout>
+
+                        <ProgressBar
+                            android:id="@+id/progress_bar_endereco"
+                            android:layout_width="32dp"
+                            android:layout_height="60dp"
+                            android:gravity="start"
+                            android:indeterminate="true"
+                            android:visibility="visible"
+                            app:layout_constraintBottom_toBottomOf="parent" />
+
+                    </RelativeLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_margin="8dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Selecione esta localização"
+                            android:textColor="@color/colorPrimary"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/textView_endereco"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_gravity="center_vertical"
+                            android:textSize="16sp"
+                            tools:text="Rua felipe ximidths asasd a sadasdas asdasd asdas asdasd" />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

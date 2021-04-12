@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "404674407541",
+    "project_id": "dengue-maps",
+    "storage_bucket": "dengue-maps.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:404674407541:android:36f25e63a0fa55fd3e1c3c",
+        "android_client_info": {
+          "package_name": "aluno.ifsc.app.focos.dengue"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "404674407541-4324o2t5ma72hpc54p5sq42e7hbiudoa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwz3uP8ycSt2E2tqbQEF1eyPy6J_ssVUc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "404674407541-4324o2t5ma72hpc54p5sq42e7hbiudoa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

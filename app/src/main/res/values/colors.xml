@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#00574B</color>
+    <color name="colorAccent">#EA2127</color>
+    <color name="colorRipple">#C5CAE9</color>
+    <color name="colorToolbar">#008577</color>
+
+    <color name="textPrimary">#000000</color>
+    <color name="textSecondary">#555555</color>
+
+    <color name="backgournd_splash">@color/colorPrimary</color>
+    <color name="icon_splash">#FFFFFF</color>
+    <color name="white">#FFFFFF</color>
+    <color name="backgournd_login">#00A794</color>
+    <color name="icons">#008577</color>
+    <color name="set_background_transparent">#BA008577</color>
+    <color name="set_background_button">#0C008577</color>
+    <color name="set_background_button_ripple">#27008577</color>
+
+    <color name="selected_dot">#2DDBB8</color>
+    <color name="idle_dot">#662DDBA4</color>
+    <color name="divider">#BDBDBD</color>
+    <color name="colorType0">#EAA021</color>
+    <color name="colorType1">#008577</color>
+    <color name="colorType2">#B768EF</color>
+    <color name="colorType3">#21EAE3</color>
+    <color name="colorType4">#21EA9A</color>
+    <color name="colorType5">#EA2167</color>
+
+
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+</resources>

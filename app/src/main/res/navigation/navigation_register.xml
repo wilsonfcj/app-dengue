@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_register"
+    app:startDestination="@id/genericFragment">
+
+    <fragment
+        android:id="@+id/genericFragment"
+        android:name="aluno.ifsc.app.focos.dengue.ui.register.RegisterGenericInfoFragment"
+        tools:layout="@layout/fragment_register_info_generic">
+        <action
+            android:id="@+id/action_genericFragment_to_registerStudentFragment"
+            app:destination="@id/registerStudentFragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/registerStudentFragment"
+        android:name="aluno.ifsc.app.focos.dengue.ui.register.RegisterPasswordFragment"
+        tools:layout="@layout/fragment_register_password"
+        app:defaultNavHost="true"/>
+
+</navigation>
