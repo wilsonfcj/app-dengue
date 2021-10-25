@@ -64,7 +64,7 @@ ext {
     retrofitVersion = '2.3.0'
     navigationFragment = '2.0.0'
     okhttp3 = '3.4.1'
-    googleGsonVersion = '2.8.2'
+    googleGsonVersion = '2.8.5'
     version_rxAndroid = '2.1.1'
     version_rxJava = '2.2.10'
     version_rxKotlin = '2.3.0'
@@ -107,8 +107,8 @@ dependencies {
 
     implementation 'com.github.rtoshiro.mflibrary:mflibrary:1.0.0'
     implementation 'de.hdodenhof:circleimageview:3.0.0'
-    implementation "android.arch.navigation:navigation-fragment-ktx:1.0.0-alpha09"
-    implementation "android.arch.navigation:navigation-ui-ktx:1.0.0-alpha09"
+    implementation "android.arch.navigation:navigation-fragment-ktx:1.0.0"
+    implementation "android.arch.navigation:navigation-ui-ktx:1.0.0"
     implementation 'com.github.drawers:SpinnerDatePicker:2.0.1'
     implementation 'com.anton46:collection-picker:1.0.2'
     implementation 'com.github.tommykw:TagView:0.0.1'
