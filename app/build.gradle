@@ -1,11 +1,19 @@
-plugins {
+//plugins {
     //id 'com.android.application'
 //    id 'kotlin-android'
 //    id 'kotlin-kapt'
 //    id 'kotlin-android-extensions'
 //    id 'realm-android'
 //    id 'com.google.gms.google-services'
-}
+//}
+
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'realm-android'
+apply plugin: 'kotlin-kapt'
+apply plugin: 'com.google.gms.google-services'
+
 
 android {
     compileSdkVersion 30
