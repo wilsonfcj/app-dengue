@@ -24,27 +24,18 @@ pipeline {
 
    
     stage('Deploy') {
-      steps {
-        script {                                                        
-          if (currentBuild.result == null         
-              || currentBuild.result == 'SUCCESS') {  
-             if(env.BRANCH_NAME ==~ /master/) {
-               // Deploy when the committed branch is master (we use fastlane to complete this)     
-               sh 'fastlane app_deploy'
-          }
-        }
-      }
-    }
+		  steps {
+			script {                                                        
+			  if (currentBuild.result == null         
+				  || currentBuild.result == 'SUCCESS') {  
+				 if(env.BRANCH_NAME ==~ /master/) {
+				   // Deploy when the committed branch is master (we use fastlane to complete this)     
+				   sh 'fastlane app_deploy'
+			  }
+			}
+		  }
+		}
+	}
 
-}
-
-  post {                                           (*****)
-    always {
-      archiveArtifacts(allowEmptyArchive: true, artifacts: 'app/build/outputs/apk/production/release/*.apk')
-
-      // And kill the emulator?
-      sh 'adb emu kill'
-    }
-  }
 
 }
