@@ -9,25 +9,31 @@ pipeline {
 	}
 	
 	stages {
-		stage('Detect build type') {
-			steps {
-				script {
-					if (env.BRANCH_NAME == 'develop' || env.CHANGE_TARGET == 'develop') {
-						env.BUILD_TYPE = 'debug'
-					} else if (env.BRANCH_NAME == 'master' || env.CHANGE_TARGET == 'master') {
-							env.BUILD_TYPE = 'release'
-					}
-				}
-			}
-		}	
 		
 		
 		
-		stage('Compile') {
-			steps {
-			// Compile the app and its dependencies
-			sh './gradlew compile${BUILD_TYPE}Sources'
-			}
-		}
+		stage('Build') { 
+            steps { 
+                sh 'make' 
+            }
+        }
+		
+		
+		 stage('Test'){
+            steps {
+                sh 'make check'
+                junit 'reports/**/*.xml' 
+            }
+        }
+		
+		
+		stage('Deploy') {
+            steps {
+                sh 'make publish'
+            }
+        }
+		
+		
+		
 	}
 }
