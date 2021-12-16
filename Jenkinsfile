@@ -11,7 +11,7 @@ pipeline {
 	stages {
 		
 		stage('Detect build type') {
-			steps {'
+			steps {
 				script {
 					if (env.BRANCH_NAME == 'develop' || env.CHANGE_TARGET == 'develop') {
 						env.BUILD_TYPE = 'debug'
