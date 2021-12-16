@@ -8,11 +8,7 @@ pipeline {
 		skipStagesAfterUnstable()
 	}
 	
-	stages {
-	   
-	}
-	
-	
+
 	stage('Detect build type') {
 		steps {
 			script {
