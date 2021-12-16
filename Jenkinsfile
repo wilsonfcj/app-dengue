@@ -14,8 +14,16 @@ pipeline {
 					env.BUILD_TYPE = 'debug'
 				} else if (env.BRANCH_NAME == 'master' || env.CHANGE_TARGET == 'master') {
 					env.BUILD_TYPE = 'release'
+				} else {
+					env.BUILD_TYPE = 'debug'
 				}
 			}
 		}
+	}
+	
+	stage('Compile') {
+		steps {
+		// Compile the app and its dependencies
+		sh './gradlew compile${BUILD_TYPE}Sources'
 	}
 }
