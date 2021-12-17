@@ -22,11 +22,9 @@ pipeline {
 			}
 		}
 		
-		stage('Compile') {
-			steps {
-				// Compile the app and its dependencies
-				sh './gradlew compile'
-			}
+		stage('Build Release APK') {
+			sh "ls ./android"
+			sh "./android/gradlew clean assembleRelease"
 		}
 		
 	}
