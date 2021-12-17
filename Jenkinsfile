@@ -13,6 +13,8 @@ pipeline {
 		stage('Detect build type') {
 			steps {
 				script {
+					
+					echo "${env.BRANCH_NAME}"
 					if (env.BRANCH_NAME == 'develop' || env.CHANGE_TARGET == 'develop') {
 						env.BUILD_TYPE = 'debug'
 					} else if (env.BRANCH_NAME == 'master' || env.CHANGE_TARGET == 'master') {
