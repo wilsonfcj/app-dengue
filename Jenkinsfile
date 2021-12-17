@@ -13,13 +13,13 @@ pipeline {
 		stage('Detect build type') {
 			steps {
 				script {
-					
-					echo "WILSON: ${env.BRANCH_NAME}"
-					echo "APPLICATION ID: ${env.APPLICATION_ID}"
+					echo "NAME: ${env.BRANCH_NAME}"
 					if (env.BRANCH_NAME == 'develop' || env.CHANGE_TARGET == 'develop') {
 						env.BUILD_TYPE = 'debug'
 					} else if (env.BRANCH_NAME == 'master' || env.CHANGE_TARGET == 'master') {
 						env.BUILD_TYPE = 'release'
+					} else {
+						env.BUILD_TYPE = 'debug'
 					}
 				}
 			}
