@@ -25,7 +25,7 @@ pipeline {
 		stage('Compile') {
 			steps {
 				// Compile the app and its dependencies
-				sh './gradlew compile${release}Sources'
+				sh './gradlew compile'
 			}
 		}
 		
