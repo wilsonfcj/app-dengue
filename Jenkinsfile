@@ -22,15 +22,19 @@ pipeline {
 			}
 		}
 		
-		stage('Build APK') {
-		  steps {
-			// Finish building and packaging the APK
-			sh './gradlew assembleDev'
-
-			// Archive the APKs so that they can be downloaded from Jenkins
-			archiveArtifacts '**/*.apk'
-		  }
+		 stage('Build') {
+            steps {
+                echo "${packageType}"
+            }
+        }
+		
+		stage('Detect build variant') {
+			steps {
+				 echo "${packageType}"
+			}
 		}
+		
+		
 		
 	}
 
