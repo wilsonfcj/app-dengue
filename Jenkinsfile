@@ -22,11 +22,14 @@ pipeline {
 			}
 		}
 		
-		stage('Build Release APK') {
-			steps {
-				sh "ls ./android"
-				sh "./android/gradlew clean assembleRelease"
-			}
+		stage('Build APK') {
+		  steps {
+			// Finish building and packaging the APK
+			sh './gradlew assembleDev'
+
+			// Archive the APKs so that they can be downloaded from Jenkins
+			archiveArtifacts '**/*.apk'
+		  }
 		}
 		
 	}
