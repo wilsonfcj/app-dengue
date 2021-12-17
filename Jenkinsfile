@@ -1,5 +1,5 @@
 pipeline {
-
+	agent any
     environment {
         // Fastlane Environment Variables
         PATH = "$HOME/.fastlane/bin:" +
