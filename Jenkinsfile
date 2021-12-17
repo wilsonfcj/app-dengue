@@ -20,6 +20,8 @@ pipeline {
         VERSION_CODE = ""
         PROGUARD_ENABLED = ""
         PROJECT_NAME = env.JOB_NAME.tokenize("/").first().replaceAll(" Android", "")
+		
+		echo "Teste projeto: ${PROJECT_NAME}"
     }
 	
     options {
