@@ -30,9 +30,9 @@ pipeline {
             steps {
                 script {
                     def projName = PROJECT_NAME.replaceAll(" ", "_").toLowerCase()
-                    sh "cp ~/Documents/android-keystores/${projName}_release.jks ../"
-                    sh "cp ~/Documents/android-keystores/${projName}_upload.jks ../"
-                    sh "cp ~/Documents/android-keystores/debug.ks ../"
+                    bat "cp ~/Documents/android-keystores/${projName}_release.jks ../"
+                    bat "cp ~/Documents/android-keystores/${projName}_upload.jks ../"
+                    bat "cp ~/Documents/android-keystores/debug.ks ../"
                 }
             }
         }
@@ -40,38 +40,38 @@ pipeline {
             steps {
                 script {
                     def projName = PROJECT_NAME.replaceAll(" ", "_").toLowerCase()
-                    sh "cp ~/Documents/${projName}/local.properties ."
+                    bat "cp ~/Documents/${projName}/local.properties ."
                 }
             }
         }
         stage('Setup Versions') {
             steps {
                 script {
-                    VERSION_NAME = sh(
+                    VERSION_NAME = bat(
                             script: './gradlew -q printVersionName',
                             returnStdout: true
                     ).trim().tokenize().last()
 
-                    VERSION_SUFFIX = sh(
+                    VERSION_SUFFIX = bat(
                             script: './gradlew -q printVersionSuffix',
                             returnStdout: true
                     ).trim().tokenize().last()
 
                     APP_VERSION_NAME = VERSION_NAME + VERSION_SUFFIX
 
-                    VERSION_CODE = sh(
+                    VERSION_CODE = bat(
                             script: './gradlew -q printVersionCode',
                             returnStdout: true
                     ).trim().tokenize().last()
 
-                    JIRA_PROJECT_KEY = sh(
+                    JIRA_PROJECT_KEY = bat(
                             script: './gradlew -q printJiraProjectKey',
                             returnStdout: true
                     ).trim().tokenize().last()
 
                     DROPBOX_FOLDER = "${PROJECT_NAME}/${VERSION_NAME}/${APP_VERSION_NAME}"
 
-                    PROGUARD_ENABLED = sh(
+                    PROGUARD_ENABLED = bat(
                             script: './gradlew -q printProguardEnabled',
                             returnStdout: true
                     ).trim().tokenize().last()
@@ -81,11 +81,11 @@ pipeline {
         stage('Build App') {
             steps {
                 // Clean and assemble APKs
-                sh './gradlew clean assembleDebug assembleRelease'
+                bat './gradlew clean assembleDebug assembleRelease'
 
                 script {
                     if (env.BRANCH_NAME.startsWith("release")) {
-                        sh './gradlew bundleUpload'
+                        bat './gradlew bundleUpload'
                     }
                 }
             }
@@ -95,7 +95,7 @@ pipeline {
             steps {
                 echo 'Static Analysis'
                 // Run Lint and analyse the results
-                sh './gradlew lintProductionRelease'
+                bat './gradlew lintProductionRelease'
                 androidLint()
             }
         }
