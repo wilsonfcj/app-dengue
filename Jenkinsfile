@@ -23,8 +23,10 @@ pipeline {
 		}
 		
 		stage('Build Release APK') {
-			sh "ls ./android"
-			sh "./android/gradlew clean assembleRelease"
+			steps {
+				sh "ls ./android"
+				sh "./android/gradlew clean assembleRelease"
+			}
 		}
 		
 	}
