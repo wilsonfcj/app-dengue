@@ -28,12 +28,7 @@ pipeline {
             }
         }
 		
-		stage('Detect build variant') {
-			steps {
-				 echo "${packageType}"
-			}
-		}
-		
+
 		
 		
 	}
