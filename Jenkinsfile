@@ -26,24 +26,6 @@ pipeline {
     }
     stages {
       
-        stage('Copy Key Stores') {
-            steps {
-                script {
-                    def projName = PROJECT_NAME.replaceAll(" ", "_").toLowerCase()
-                    bat "cp ~/Documents/android-keystores/${projName}_release.jks ../"
-                    bat "cp ~/Documents/android-keystores/${projName}_upload.jks ../"
-                    bat "cp ~/Documents/android-keystores/debug.ks ../"
-                }
-            }
-        }
-        stage('Copy Local Properties') {
-            steps {
-                script {
-                    def projName = PROJECT_NAME.replaceAll(" ", "_").toLowerCase()
-                    bat "cp ~/Documents/${projName}/local.properties ."
-                }
-            }
-        }
         stage('Setup Versions') {
             steps {
                 script {
