@@ -18,9 +18,7 @@ pipeline {
         VERSION_SUFFIX = ""
         APP_VERSION_NAME = ""
         VERSION_CODE = ""
-        DROPBOX_FOLDER = ""
         PROGUARD_ENABLED = ""
-        JIRA_PROJECT_KEY = ""
         PROJECT_NAME = env.JOB_NAME.tokenize("/").first().replaceAll(" Android", "")
     }
 	
@@ -39,6 +37,13 @@ pipeline {
 						env.BUILD_TYPE = 'release'
 					}
 				}
+			}
+		}
+		
+		stage('Compile') {
+			steps {
+				// Compile the app and its dependencies
+				sh './gradlew compile${env.BUILD_TYPE}Sources'
 			}
 		}
 	 }
