@@ -26,40 +26,7 @@ pipeline {
     }
     stages {
       
-        stage('Setup Versions') {
-            steps {
-                script {
-                    VERSION_NAME = bat(
-                            script: './gradlew -q printVersionName',
-                            returnStdout: true
-                    ).trim().tokenize().last()
-
-                    VERSION_SUFFIX = bat(
-                            script: './gradlew -q printVersionSuffix',
-                            returnStdout: true
-                    ).trim().tokenize().last()
-
-                    APP_VERSION_NAME = VERSION_NAME + VERSION_SUFFIX
-
-                    VERSION_CODE = bat(
-                            script: './gradlew -q printVersionCode',
-                            returnStdout: true
-                    ).trim().tokenize().last()
-
-                    JIRA_PROJECT_KEY = bat(
-                            script: './gradlew -q printJiraProjectKey',
-                            returnStdout: true
-                    ).trim().tokenize().last()
-
-                    DROPBOX_FOLDER = "${PROJECT_NAME}/${VERSION_NAME}/${APP_VERSION_NAME}"
-
-                    PROGUARD_ENABLED = bat(
-                            script: './gradlew -q printProguardEnabled',
-                            returnStdout: true
-                    ).trim().tokenize().last()
-                }
-            }
-        }
+      
         stage('Build App') {
             steps {
                 // Clean and assemble APKs
